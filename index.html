@@ -4,11 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project X | The Ultimate Evolution</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Project X | The Goddess of Auto-Parry</title>
+    <meta name="title" content="Project X | The Goddess of Auto-Parry">
+    <meta name="description" content="Dominate the game with Project X. Featuring elite Auto-Parry, Infinite Parry, and a glowing red goddess aesthetic.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://project-x.netlify.app/">
+    <meta property="og:title" content="Project X | Elite Gaming Utility">
+    <meta property="og:description" content="The ultimate utility suite for high-stakes combat. Engineered with precision.">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg"> <!-- Replace with actual branding image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Project X | The Goddess of Auto-Parry">
+    <meta property="twitter:description" content="Engineered with precision, adorned with power.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             background-color: #050505;
@@ -16,12 +34,8 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
-        .font-goddess {
-            font-family: 'Cinzel', serif;
-        }
-        .font-tech {
-            font-family: 'Space Grotesk', sans-serif;
-        }
+        .font-goddess { font-family: 'Cinzel', serif; }
+        .font-tech { font-family: 'Space Grotesk', sans-serif; }
         .glow-red {
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.4);
         }
@@ -35,29 +49,32 @@
         .bg-radial-gradient {
             background: radial-gradient(circle at center, rgba(50, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
         }
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #000;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
         ::-webkit-scrollbar-thumb {
             background: #ff0000;
             border-radius: 10px;
         }
+        /* Mobile optimization */
+        @media (max-width: 640px) {
+            .text-huge { font-size: 3rem; line-height: 1; }
+        }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+      }
+    }
+    </script>
 </head>
 <body>
     <div id="root"></div>
+    <!-- Explicit module import for Netlify/Standard static servers -->
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>

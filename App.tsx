@@ -70,7 +70,7 @@ const HeroSection: React.FC<{ onNext: () => void }> = ({ onNext }) => {
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-red-900/20 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-red-900/20 rounded-full blur-[120px] pointer-events-none"></div>
       
-      <div className="z-10 text-center max-w-4xl animate-fade-in">
+      <div className="z-10 text-center max-w-4xl">
         <div className="inline-flex items-center gap-2 px-3 py-1 border border-red-500/50 rounded-full text-red-500 font-tech text-[10px] tracking-[0.2em] uppercase mb-6 bg-red-500/10">
           <Crown size={12} /> The Goddess Standard of Exploitation
         </div>
@@ -128,7 +128,7 @@ const FeaturesPage: React.FC = () => {
     <section className="py-24 px-6 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-goddess text-4xl md:text-5xl font-black text-white mb-4">ENGINEERED FOR <span className="text-red-600 italic">DOMINANCE</span></h2>
+          <h2 className="font-goddess text-4xl md:text-5xl font-black text-white mb-4 uppercase">ENGINEERED FOR <span className="text-red-600 italic">DOMINANCE</span></h2>
           <p className="text-gray-500 font-tech uppercase tracking-widest text-xs">Unmatched Power. Zero Compromise.</p>
         </div>
 
@@ -160,8 +160,7 @@ const ScriptSection: React.FC = () => {
   const [copiedScript, setCopiedScript] = useState(false);
 
   const scriptKey = "KD-6af0f0b1-bad8-4e6e-940c-0f536a39eead";
-  const scriptContent = `script_key = "KD-6af0f0b1-bad8-4e6e-940c-0f536a39eead"
-  loadstring(game:HttpGet("https://api.kodamo.net/loader/fxbpontv5v9fy82ycrd9"))()`;
+  const scriptContent = `script_key = "${scriptKey}"\nloadstring(game:HttpGet("https://api.kodamo.net/loader/fxbpontv5v9fy82ycrd9"))()`;
 
   const handleCopy = (text: string, setCopied: (v: boolean) => void) => {
     navigator.clipboard.writeText(text);
@@ -210,7 +209,7 @@ const ScriptSection: React.FC = () => {
                 {copiedScript ? 'Copied!' : 'Copy Script'}
               </button>
             </div>
-            <div className="font-mono text-white/90 break-all bg-black/40 p-4 rounded border border-red-900/20 text-sm leading-relaxed">
+            <div className="font-mono text-white/90 break-all bg-black/40 p-4 rounded border border-red-900/20 text-sm leading-relaxed whitespace-pre">
               {scriptContent}
             </div>
           </div>
@@ -268,7 +267,7 @@ const CommunityPage: React.FC = () => {
       </div>
 
       <footer className="mt-32 text-gray-600 font-tech text-[10px] tracking-[0.5em] uppercase">
-        Project X &copy; 2026. All Rights Reserved. Dominance Guaranteed.
+        Project X &copy; {new Date().getFullYear()}. All Rights Reserved. Dominance Guaranteed.
       </footer>
     </section>
   );
