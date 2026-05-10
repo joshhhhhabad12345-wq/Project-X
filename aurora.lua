@@ -1,5 +1,5 @@
--- [[ AURORA EXECUTOR & SCRIPT HUB V3 ]] --
--- Features: Script Collection (Saving/Loading), Live Console, Advanced Syntax Highlighting, Mobile Dragging
+-- Aurora executor/hub v1.1 (ano_jay?!)
+-- syntax highlight is currently brocken, but it doesnt effect your script, just ignore it lmao
 
 local CoreGui = game:GetService("CoreGui")
 local HttpService = game:GetService("HttpService")
