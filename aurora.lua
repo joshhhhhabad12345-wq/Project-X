@@ -1075,4 +1075,4 @@ LoadExecutorBtn.MouseButton1Click:Connect(function()
 	end
 end)
 
-print("Aurora V3 Loaded Successfully.")
+print("aurora script | v1.1 | ano_jay?!")
